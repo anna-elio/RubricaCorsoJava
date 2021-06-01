@@ -1,3 +1,4 @@
 .settings/
 bin/
-README.txt
+.DS_Store
+.dbeaver/
