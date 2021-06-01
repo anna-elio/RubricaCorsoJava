@@ -33,9 +33,7 @@ public class AppFrame extends JFrame {
 		
 		this.getContentPane().setLayout(new BorderLayout());
 		ContactList panel = new ContactList(controller.getContactList());
-		this.getContentPane().add(
-				panel
-				, BorderLayout.CENTER);
+		this.getContentPane().add(panel, BorderLayout.CENTER);
 	}
 	
 	private JMenuBar createMenuBar() {

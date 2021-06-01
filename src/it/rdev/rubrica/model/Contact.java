@@ -52,7 +52,7 @@ public class Contact {
 	@Override
 	public String toString() {
 		return "Contact [id=" + id + ", name=" + name + ", surname=" + surname + ", phoneNumbers=" + phoneNumbers
-				+ ", emails=" + emails + "]";
+				+ ", emails=" + emails + "]\n";
 	}
 	
 }

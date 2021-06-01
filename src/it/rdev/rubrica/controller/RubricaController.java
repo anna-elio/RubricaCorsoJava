@@ -32,5 +32,32 @@ public class RubricaController {
 		}
 		return view;
 	}
+	
+	public String deleteContact(Contact c) {
+		String view = "LIST";
+		// Controlli ore lavorate
+		// Controlli anagrafica
+		// altri controlli
+		try {
+			dao.delete(c);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			view = "LIST-ERROR";
+		}
+		return view;
+	}
 
+	public String updateContact(Contact c) {
+		String view = "LIST";
+		// Controlli ore lavorate
+		// Controlli anagrafica
+		// altri controlli
+		try {
+			dao.update(c);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			view = "LIST-ERROR";
+		}
+		return view;
+	}
 }
