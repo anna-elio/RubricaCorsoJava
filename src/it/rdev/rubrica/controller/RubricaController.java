@@ -5,14 +5,14 @@ import java.util.List;
 
 import it.rdev.rubrica.model.Contact;
 import it.rdev.rubrica.model.ContactDAO;
-import it.rdev.rubrica.model.impl.rdbms.ContactDAOImpl;
+import it.rdev.rubrica.model.impl.DaoManager;
 
 public class RubricaController {
 	
 	private ContactDAO dao;
 	
 	public RubricaController() {
-		dao = new ContactDAOImpl();
+		dao = DaoManager.createContactDAO();
 	}
 
 	public List<Contact> getContactList() {
