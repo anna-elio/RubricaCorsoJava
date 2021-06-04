@@ -11,7 +11,6 @@ public class Contact {
 	private Set<String> phoneNumbers;
 	private Set<String> emails;
 	
-	
 	public Contact() {}
 
 	public String getName() {
