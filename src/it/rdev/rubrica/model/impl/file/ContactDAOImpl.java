@@ -9,7 +9,7 @@ public class ContactDAOImpl extends AbstractDAO<Contact> implements ContactDAO {
 
 	@Override
 	public List<Contact> getAll() {
-		if(super.getAll()==null) {
+		if(super.getAll() == null) {
 			System.out.println("Rubrica vuota");
 		}
 		return super.getAll();
@@ -23,12 +23,22 @@ public class ContactDAOImpl extends AbstractDAO<Contact> implements ContactDAO {
 
 	@Override
 	public boolean delete(Contact t){
+		//TODO da testare
+		List<Contact> contacts = super.getAll();
+		contacts.remove(t.getId()-1);
 		return false;
 		
 	}
 
 	@Override
 	public boolean update(Contact t) {
+		//TODO da testare
+		List<Contact> contacts = super.getAll();
+		for(Contact cnt : contacts) {
+			if(cnt.equals(t)) {
+				cnt=t;
+			}
+		}
 		return false;
 		
 	}

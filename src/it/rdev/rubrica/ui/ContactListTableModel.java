@@ -58,7 +58,7 @@ public class ContactListTableModel extends AbstractTableModel {
         case 4: final JButton btnRemove = new JButton(COLUMN_NAMES[columnIndex]);
         		btnRemove.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent arg0) {
-                    	if( controller.removeContact(contacts.get(rowIndex)) ) {
+                    	if( controller.deleteContact(contacts.get(rowIndex)) ) {
                     		contacts.remove(contacts.get(rowIndex));
                     		fireTableDataChanged();
                     	}

@@ -30,31 +30,21 @@ public class RubricaController {
 		return view;
 	}
 	
-	public String deleteContact(Contact c) {
-		String view = "LIST";
-		// Controlli ore lavorate
-		// Controlli anagrafica
-		// altri controlli
+	public boolean deleteContact(Contact c) {
 		try {
-			dao.delete(c);
+			return dao.delete(c);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			view = "LIST-ERROR";
 		}
-		return view;
+		return false;
 	}
 
-	public String updateContact(Contact c) {
-		String view = "LIST";
-		// Controlli ore lavorate
-		// Controlli anagrafica
-		// altri controlli
+	public boolean updateContact(Contact c) {
 		try {
-			dao.update(c);
+			return dao.update(c);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			view = "LIST-ERROR";
 		}
-		return view;
+		return false;
 	}
 }
