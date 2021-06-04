@@ -1,28 +1,33 @@
 package it.rdev.rubrica.model.impl.file;
 
+import java.io.IOException;
+import java.util.List;
+
+import it.rdev.rubrica.model.Contact;
 import it.rdev.rubrica.model.DAO;
 
 /**
  * 
- * Classe astratta che contiene la logica comune per le operazioni di CRUD su database relazionale
+ * Classe astratta che contiene la logica comune per le operazioni di CRUD su file
  * 
- * @author Danilo Di Nuzzo
+ * @author Anna Eliotropio
  *
  * @param <T> entità su cui effettuare le operazioni di CRUD
- * @param <D> tipo di cui è formato l'ID dell'entità da gestire (tipo del database)
  */
 abstract class AbstractDAO<T> implements DAO<T> {
 
-	protected void executeCmd() {
+	protected List<Contact> getAll(){
+		List<Contact> list = FileSource.getInstance().getContacts();
+		return list;
+	}
 
-	}
-	
-	protected void executeInsert() {
-		
-	}
-	
-	protected void executeUpdate() {
-		
+	protected static void insertJson(Contact contact) {
+		try {
+			FileSource.getInstance().setContacts(contact);
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Qualcosa non va con la scrittura del file");
+		}
 	}
 
 }

@@ -8,5 +8,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.24.jar"/>
+	<classpathentry kind="lib" path="/Users/hein/git/RubricaCorsoJava/lib/gson-2.8.7.jar" sourcepath="/Users/hein/git/RubricaCorsoJava/lib/gson-2.8.7-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

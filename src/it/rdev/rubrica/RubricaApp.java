@@ -11,14 +11,17 @@ public class RubricaApp {
 		//new AppFrame().setVisible(true);
 		controller = new RubricaController();
 		System.out.println(controller.getContactList());
-//		Contact c = new Contact()
-//				.setName("B")
-//				.setSurname("b");
-//		controller.addContact(c);
+		Contact c = new Contact()
+				.setName("Ale")
+				.setSurname("Quinta")
+				.addEmails("AAAAAA@gmail.com")
+				.addPhoneNumbers("123456");
+		controller.addContact(c);
 //		c.addEmails("AAAAAA@gmail.com").addPhoneNumbers("123456");
 //		System.out.println(c.getId());
 //		controller.updateContact(c);
-//		System.out.println(controller.getContactList());
+		System.out.println("-------------------------------------------------------");
+		System.out.println(controller.getContactList());
 	}
 	
 }
